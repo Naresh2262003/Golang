@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 // 1) create a file and insert data in that
@@ -61,7 +61,7 @@ import (
 
 // 3) Readong a file using function
 func main() {
-	content, err := ioutil.ReadFile("example.txt")
+	content, err := os.ReadFile("example.txt")
 
 	if err != nil {
 		fmt.Println("error while reading the file", err)
